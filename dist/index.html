@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Что я умею — App</title>
+<style>
+  :root { color-scheme: light; --bg:#0f172a; --card:#ffffff; --muted:#64748b; --accent:#f97316; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#f1f5f9; color:#0f172a; }
+  header { background: linear-gradient(135deg,#0f172a,#1e3a8a 60%,#f97316 130%); color:#fff; padding:48px 24px; text-align:center; }
+  header h1 { margin:0 0 12px; font-size: clamp(28px,5vw,48px); }
+  header p { margin:0 auto; max-width:640px; font-size:17px; opacity:.92; }
+  .badge { display:inline-block; background:#f97316; color:#fff; font-size:13px; padding:6px 12px; border-radius:999px; margin-bottom:14px; font-weight:700; letter-spacing:.02em; }
+  main { max-width:1000px; margin:-28px auto 48px; padding:0 20px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+  .card { background:var(--card); border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(15,23,42,.08); border:1px solid #e2e8f0; }
+  .card h2 { font-size:18px; margin:0 0 8px; }
+  .card p { margin:0; color:var(--muted); font-size:14.5px; line-height:1.5; }
+  .icon { font-size:26px; }
+  .panel { background:#0f172a; color:#e2e8f0; border-radius:16px; padding:22px; margin-top:18px; }
+  .panel code { background:#1e293b; padding:2px 8px; border-radius:8px; color:#fdba74; }
+  footer { text-align:center; color:var(--muted); font-size:13px; padding:0 20px 40px; }
+  .cta { margin-top:18px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+  .cta span { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); padding:8px 14px; border-radius:999px; font-size:14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="badge">App • работает локально и в превью</div>
+  <h1>Что я умею</h1>
+  <p>Я — coding-агент в этом репозитории: помогаю с кодом, скриптами, сборкой, запуском и проверкой результата в браузере.</p>
+  <div class="cta"><span>Код</span><span>Сборка</span><span>Запуск :3000</span><span>Скриншоты</span></div>
+</header>
+<main>
+  <div class="grid">
+    <div class="card"><div class="icon">📁</div><h2>Файлы и код</h2><p>Читаю, ищу, правлю и создаю файлы внутри проекта. Работаю аккуратно: проверяю изменения перед ответом.</p></div>
+    <div class="card"><div class="icon">💻</div><h2>Терминал</h2><p>Выполняю команды, ставлю зависимости, собираю проект и проверяю, что сервер отвечает на порту 3000.</p></div>
+    <div class="card"><div class="icon">🌐</div><h2>Веб и запуск</h2><p>Поднимаю статический сервер из <code>dist</code>, пишу deployment-output.json и держу приложение запущенным.</p></div>
+    <div class="card"><div class="icon">📸</div><h2>Проверка в браузере</h2><p>Открываю точный URL, жду рендер и сохраняю desktop + mobile скриншоты: final-desktop.png и final-mobile.png.</p></div>
+    <div class="card"><div class="icon">🔎</div><h2>Поиск и анализ</h2><p>Ищу по коду, разбираю ошибки и логи, предлагаю конкретные исправления вместо догадок.</p></div>
+    <div class="card"><div class="icon">✅</div><h2>Контроль результата</h2><p>Скрипты — не конец: запускаю их, проверяю HTTP, открываю скриншоты и подтверждаю рендер.</p></div>
+  </div>
+  <div class="panel">
+    <b>Как проверить:</b>
+    <p>Сервер слушает <code>PORT (по умолчанию 3000)</code> и отдаёт эту страницу из <code>dist/index.html</code>. Захват идёт по <code>CAPTURE_URL</code> в <code>CAPTURE_DIR</code>, приложение при этом остаётся запущенным.</p>
+  </div>
+</main>
+<footer>PlayGround • статическая сборка в dist • без внешних зависимостей</footer>
+</body>
+</html>
